@@ -1,0 +1,134 @@
+:root {
+  --primary: #7A2E2E; /* maroon */
+  --secondary: #FDECEC; /* soft pink */
+  --background: linear-gradient(to bottom right, #fff7f7, #fdf2f2, #ffe4e6);
+  --card: #FFFFFF;
+  --text: #4b5563;
+  --radius: 12px;
+  --shadow: 0 8px 20px rgba(122,46,46,.15);
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--background);
+  color: var(--text);
+}
+
+/* ===== TOPBAR ===== */
+.admin-topbar {
+  height: 60px;
+  background: linear-gradient(to right, #fff1f2, #ffe4e6);
+  color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid #f3d6d6;
+}
+
+/* ===== BUTTON LOGOUT ===== */
+.btn-logout {
+  background: white;
+  color: var(--primary);
+  border: 1px solid #e5e7eb;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-logout:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* ===== SIDEBAR ===== */
+.admin-sidebar {
+  width: 230px;
+  background: linear-gradient(to bottom, #7A2E2E, #5c1f1f);
+  padding: 20px 0;
+}
+
+/* LINK */
+.sidebar-link {
+  display: block;
+  padding: 12px 20px;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 10px;
+  margin: 4px 10px;
+  transition: 0.2s;
+}
+
+/* HOVER */
+.sidebar-link:hover {
+  background: rgba(255,255,255,0.2);
+  color: white;
+}
+
+/* ACTIVE (INI YANG KOTAK PUTIH 🔥) */
+.sidebar-link.active {
+  background: white;
+  color: #7A2E2E;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,.1);
+}
+
+/* ===== MAIN ===== */
+.admin-main {
+  flex: 1;
+  padding: 24px;
+}
+
+/* ===== TITLE ===== */
+.page-title {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: var(--primary);
+}
+
+/* ===== CARD ===== */
+.table-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow-x: auto;
+}
+
+/* ===== TABLE ===== */
+thead {
+  background: #fde8e8;
+  color: var(--primary);
+}
+
+tbody tr:hover {
+  background: #fff1f2;
+}
+
+/* ===== BUTTON ===== */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .admin-wrapper {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .sidebar-link {
+    white-space: nowrap;
+  }
+}

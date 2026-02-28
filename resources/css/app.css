@@ -1,0 +1,283 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #64313E;
+  --secondary: #C1DBE8;
+  --bg: #F7F9FB;
+  --card: #FFFFFF;
+  --text: #1F2937;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  background: var(--card);
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 14px rgba(0,0,0,.06);
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.nav-actions a,
+.nav-actions button {
+  font-size: 13px;
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-actions .btn-outline {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.nav-actions .btn {
+  background: var(--primary);
+  color: white;
+}
+
+.container {
+  padding: 40px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 10px 26px rgba(0,0,0,.06);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+  gap: 22px;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+p {
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+.btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn.secondary {
+  background: var(--secondary);
+  color: #1f2937;
+}
+
+.btn-danger {
+  background: #dc2626;
+  color: white;
+}
+
+.btn:hover {
+  opacity: .9;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 9px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  margin-top: 6px;
+  margin-bottom: 14px;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+th {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge.primary {
+  background: var(--primary);
+  color: white;
+}
+
+.badge.secondary {
+  background: var(--secondary);
+  color: #1f2937;
+}
+
+.form-wrapper {
+  max-width: 420px;
+  margin: 80px auto;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 24px;
+  color: var(--primary);
+}
+
+.link {
+  font-size: 13px;
+  color: var(--primary);
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 60px 40px;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  margin-bottom: 14px;
+}
+
+.hero-text p {
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.hero-image {
+  background: linear-gradient(135deg, var(--secondary), #eaf5fb);
+  border-radius: 28px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 14px 30px rgba(0,0,0,.08);
+}
+
+.feature-section {
+  padding: 0 40px 70px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 24px;
+}
+
+.feature-card {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 8px 22px rgba(0,0,0,.06);
+  transition: .2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+}
+
+.feature-card h4 {
+  margin-bottom: 6px;
+  color: var(--primary);
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.stat-bar {
+  background: var(--secondary);
+  padding: 50px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+  gap: 26px;
+  text-align: center;
+}
+
+.stat-box h2 {
+  margin: 0;
+  font-size: 30px;
+  color: var(--primary);
+}
+
+.stat-box p {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: #6b7280;
+  padding: 26px 0;
+}
